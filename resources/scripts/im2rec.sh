@@ -1,4 +1,8 @@
 #!/bin/bash
+MXNET_HOME=~/personal/incubator-mxnet
+PROJECT_ROOT=$(cd "$(dirname $0)/../.."; pwd)
+
+data_path=$PROJECT_ROOT/data/
 
 if [ ! -f "$data_path/data_train2.lst" ]; then
 
