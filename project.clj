@@ -8,5 +8,4 @@
                  ;;opencv wrapper
                  [origami "4.0.0-7"]]
 
-  :repositories [["vendredi" {:url "https://repository.hellonico.info/repository/hellonico/"}]]
-  :repl-options {:init-ns mxnet-made-simple.core})
+  :repositories [["vendredi" {:url "https://repository.hellonico.info/repository/hellonico/"}]])
