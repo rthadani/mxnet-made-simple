@@ -17,7 +17,7 @@
 (def category-count 10)
 (def batch-size 10)
 
-(def ctx (context/gpu 0))
+(def ctx (context/cpu))
 
 (def X (random/uniform 0 1 [sample-size feature-count]))
 (def Y

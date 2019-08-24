@@ -3,7 +3,7 @@
             [org.apache.clojure-mxnet.module :as m]
             [org.apache.clojure-mxnet.context :as context]))
 
-(def model-dir "models")
+(def model-dir "model")
 (def ctx  (context/gpu 0))
 
 (defn render-model!
@@ -17,24 +17,24 @@
     (viz/render dot model-name path)))
 
 
-(def vgg16-mod
+#_ (def vgg16-mod
   "VGG16 Module"
   (m/load-checkpoint {:prefix (str model-dir "/vgg16") :epoch 0 :contexts [ctx]} ))
 
-(def resnet18-mod
+#_ (def resnet18-mod
   "Resnet18 Module"
   (m/load-checkpoint {:prefix (str model-dir "/resnet-18") :epoch 0 :contexts [ctx]}))
 
 (def model-render-dir "model_render")
 
 ;; Rendering pretrained VGG16
-(render-model! {:model-name "vgg16"
+#_ (render-model! {:model-name "vgg16"
                 :model-sym (m/symbol vgg16-mod)
                 :input-data-shape [1 3 244 244]
                 :path model-render-dir})
 
 ;; Rendering pretrained Resnet18
-(render-model! {:model-name "resnet18"
+#_ (render-model! {:model-name "resnet18"
                 :model-sym (m/symbol resnet18-mod)
                 :input-data-shape [1 3 244 244]
                 :path model-render-dir})
