@@ -1,6 +1,7 @@
 (ns mxnet-made-simple.autoencoder
   (:require [org.apache.clojure-mxnet.io :as mx-io]
-            [org.apache.clojure-mxnet.symbol :as sym]))
+            [org.apache.clojure-mxnet.symbol :as sym]
+            [org.apache.clojure-mxnet.visualization :as viz]))
 
 (def data-dir = "data")
 (def train-data (mx-io/mnist-iter {:image (str data-dir "train-images-idx3-ubyte")
