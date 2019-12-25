@@ -94,7 +94,8 @@
       ;; Training for `num-epochs`
       (m/fit {:train-data train-iter :eval-data valid-iter :num-epoch 50})))
 
-#_(train! model-module)
+#_ (train! model-module)
+
 
 ;;; Validating the Model
 #_(m/score model-module
